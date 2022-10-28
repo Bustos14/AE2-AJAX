@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet">
+    <script type="text/javascript" src="/AE-1.DOM-FORMULARIOS-REQ2/scripts/scripts.js"></script>
+    <title>Dom y Formularios. Requerimento 2</title>
+</head>
+
+<body>
+    <h1>Formulario Requerimento 2</h1>
+    <form action="" name="formulario" class="formulario" id="form">
+        <legend>¿Cómo quieres la pizza hoy?</legend>
+        <div class="contenedor-campos">
+        <!-- Cajas de texto -->
+
+                    <!-- Nombre-->
+        <div class="campo">
+            <label for="nombre">Nombre: </label>
+            <input type="text" name="nombre" id="nombre" required>
+            <p class="warning" name="parrafoAlert" id="parrafoAlert"></p>
+        </div>
+        
+                    <!-- Telefono -->
+        <div class="campo">
+            <label for="telefono">Telefono: </label>
+            <input type="text" name="telefono" id="telefono" required>
+            <p class="warning" name="parrafoAlert" id="parrafoAlert"></p>
+        </div>
+
+                     <!-- Direccion -->
+        <div class="campo largo">
+            <label for="direccion">Direccion: </label>
+            <input type="text" name="direccion" id="direccion" required>
+            <p class="warning" name="parrafoAlert" id="parrafoAlert"></p>
+        </div>
+
+                    <!-- Email -->
+        <div class="campo largo">
+            <label for="email">Email: </label>
+            <input type="text" name="email" id="email" required>
+            <p class="warning" name="parrafoAlert" id="parrafoAlert"></p>
+        </div>
+
+
+        <h3 class="tittle-second">Eliga el tamaño de su pizza</h3>
+        
+        <!-- Radio buttons -->
+        <div class="campo campo-pizza">
+            <label for="pequenia">Pizza pequeña 5€
+                <img src="./img/pizza.png" alt="pizza pequeña" width="25" height="25"></label>
+            <input type="radio" value="5" name="tamaño" id="pequenia" checked>
+        </div>
+
+        <div class="campo campo-pizza">
+            <label for="mediana">Pizza mediana 10€
+                <img src="./img/pizza.png" alt="pizza pequeña" width="35" height="35"></label>
+            <input type="radio" value="10" name="tamaño" id="mediana">
+        </div>
+
+        <div class="campo campo-pizza">
+            <label for="grande">Pizza grande 15€
+                <img src="./img/pizza.png" alt="pizza pequeña" width="45" height="45"></label>
+            <input type="radio" value="15" name="tamaño" id="grande">
+        </div>
+
+        <h3 class="tittle-second">Eliga los ingredientes de tu pizza (cada ingrediente 1€)</h3>
+
+        <!-- Checkbox -->
+        <div class="campo campo-ingrediente ">
+            <label for="ing1">Bacon
+                <img src="./img/bacon.png" alt="pizza pequeña" width="25" height="25"></label>
+            <input type="checkbox" name="ingredientes" id="ing1" value="1" class="valores" checked>
+        </div>
+
+        <div class="campo campo-ingrediente  ">
+            <label for="ing2">Queso
+                <img src="./img/queso.png" alt="pizza pequeña" width="25" height="25"></label>
+            <input type="checkbox" name="ingredientes" id="ing2" value="1" class="valores">
+        </div>
+
+        <div class="campo campo-ingrediente ">
+            <label for="ing3">Champiñones
+                <img src="./img/champi.png" alt="pizza pequeña" width="25" height="25"></label>
+            <input type="checkbox" name="ingredientes" id="ing3" value="1" class="valores">
+        </div>
+
+        <div class="campo campo-ingrediente ">
+            <label for="ing4">Queso de cabra
+                <img src="./img/quesocabra.webp" alt="pizza pequeña" width="25" height="25"></label>
+            <input type="checkbox" name="ingredientes" id="ing4" value="1" class="valores">
+        </div>
+        </div>
+        <!-- Boton -->
+        <div>
+            <button type="submit" id="btnEnviar" value="Enviar" class="boton">Enviar formulario</button>
+            <p class="warning" id="warning"></p>
+        </div>
+        <div>
+            <p class="total" id="total"></p>
+        </div>
+        
+    </form>
+
+        
+</body>
+</html>
