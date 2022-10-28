@@ -10,7 +10,7 @@ $(document).ready(function() {
                 let fila = $('<tr>');
 
                 fila.append($(`<td>${tamanios.nombre}</td>`));
-                fila.append($(`<td>${tamanios.pvp}</td>`));
+                fila.append($(`<td>${tamanios.pvp}€</td>`));
 
                 $('#tamanios tbody').append(fila);
             });
@@ -24,7 +24,7 @@ $(document).ready(function() {
                 let fila1 = $('<tr>');
 
                 fila1.append($(`<td>${ingredientes.nombre}</td>`));
-                fila1.append($(`<td>${ingredientes.pvp}</td>`));
+                fila1.append($(`<td>${ingredientes.pvp}€</td>`));
 
                 $('#ingredientes tbody').append(fila1);
             });

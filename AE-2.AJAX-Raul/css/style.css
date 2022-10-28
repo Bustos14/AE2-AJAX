@@ -58,6 +58,16 @@ body{
 }
 
 .tablaDinamica{
+    text-align: right;
     background-color: white;
-    
+    border-collapse: collapse;
+}
+
+.tablaDinamica tr{
+    background-color: #ffff00;
+}
+
+.tablaDinamica td{
+    background-color: #1726cf;
+    color: white;
 }
