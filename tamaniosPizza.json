@@ -3,23 +3,23 @@
       "TAMANIOS":[
          {
             "NOMBRE":"PEQUEÑA",
-            "DIMENSIONES":35,
-            "PVP":10
+            "DIMENSIONES":30,
+            "PVP":5
          },
          {
             "NOMBRE":"MEDIANA",
             "DIMENSIONES":35,
-            "PVP":13
+            "PVP":10
          },
          {
             "NOMBRE":"PEQUEÑA",
             "DIMENSIONES":40,
-            "PVP":20
+            "PVP":15
          },
          {
             "NOMBRE":"EXTRA GRANDE",
             "DIMENSIONES":50,
-            "PVP":25
+            "PVP":20
          }
       ]
    }

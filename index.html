@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/style.css" rel="stylesheet">
-    <script type="text/javascript" src="/AE-1.DOM-FORMULARIOS-REQ2/scripts/scripts.js"></script>
+    <script type="text/javascript" src="/AE2_AJAX-FORMULARIOS/scripts/scripts.js"></script>
+    <script type="text/javascript" src="/AE2_AJAX-FORMULARIOS/scripts/scriptAjax.js"></script>
     <title>Dom y Formularios. Requerimento 2</title>
 </head>
 
@@ -69,37 +70,8 @@
         <h3 class="tittle-second">Eliga los ingredientes de tu pizza (cada ingrediente 1€)</h3>
 
         <!-- Checkbox -->
-        <div class="campo campo-ingrediente ">
-            <label for="ing1">Bacon
-                <img src="./img/bacon.png" alt="pizza pequeña" width="25" height="25"></label>
-            <input type="checkbox" name="ingredientes" id="ing1" value="1" class="valores" checked>
-        </div>
-
-        <div class="campo campo-ingrediente  ">
-            <label for="ing2">Queso
-                <img src="./img/queso.png" alt="pizza pequeña" width="25" height="25"></label>
-            <input type="checkbox" name="ingredientes" id="ing2" value="1" class="valores">
-        </div>
-
-        <div class="campo campo-ingrediente ">
-            <label for="ing3">Champiñones
-                <img src="./img/champi.png" alt="pizza pequeña" width="25" height="25"></label>
-            <input type="checkbox" name="ingredientes" id="ing3" value="1" class="valores">
-        </div>
-
-        <div class="campo campo-ingrediente ">
-            <label for="ing4">Queso de cabra
-                <img src="./img/quesocabra.webp" alt="pizza pequeña" width="25" height="25"></label>
-            <input type="checkbox" name="ingredientes" id="ing4" value="1" class="valores">
-        </div>
-        </div>
-        <!-- Boton -->
-        <div>
-            <button type="submit" id="btnEnviar" value="Enviar" class="boton">Enviar formulario</button>
-            <p class="warning" id="warning"></p>
-        </div>
-        <div>
-            <p class="total" id="total"></p>
+        <div class="campo campo-ingrediente" id = "ingredientesContent">
+        
         </div>
         
     </form>
