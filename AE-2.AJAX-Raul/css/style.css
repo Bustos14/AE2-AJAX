@@ -1,0 +1,63 @@
+body{
+    padding: 0;
+    margin: 0;
+    display: grid;    
+    justify-content: center;
+}
+
+.form{
+    background-image: url("/img/pizzeria.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: auto;
+    width: 200px;
+}
+
+.tittle{
+    text-align: center;
+    background-color: #C900FF;
+    border-radius: 20px;
+    padding: 8px;
+}
+
+.campo{
+    padding: 8px;
+    margin-bottom: 15px;
+}
+
+.campo label{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.campo input{
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    min-width: 85%;
+}
+
+.button{
+    background-color:#0033FF ;
+    color: #fff;
+    padding: 15px;
+    margin-top: 3px;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 15px;
+    width: 100%;
+    text-align: center;
+    border: none;
+}
+
+.enviar{
+    background-color: green;
+}
+
+.tablaDinamica{
+    background-color: white;
+    
+}
