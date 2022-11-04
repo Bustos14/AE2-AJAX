@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/style.css" rel="stylesheet">
     <script type="text/javascript" src="/AE2_AJAX-FORMULARIOS/scripts/scripts.js"></script>
-    <script type="text/javascript" src="/AE2_AJAX-FORMULARIOS/scripts/scriptAjax.js"></script>
-    <title>Dom y Formularios. Requerimento 2</title>
+
+    <title>AJAX y Formularios. </title>
 </head>
 
 <body>
-    <h1>Formulario Requerimento 2</h1>
+    <div class="w-33">
     <form action="" name="formulario" class="formulario" id="form">
         <legend>¿Cómo quieres la pizza hoy?</legend>
         <div class="contenedor-campos">
@@ -46,34 +46,31 @@
         </div>
 
 
-        <h3 class="tittle-second">Eliga el tamaño de su pizza</h3>
+        <h3 class="tittle-second">Elija el tamaño de su pizza</h3>
         
         <!-- Radio buttons -->
-        <div class="campo campo-pizza">
-            <label for="pequenia">Pizza pequeña 5€
-                <img src="./img/pizza.png" alt="pizza pequeña" width="25" height="25"></label>
-            <input type="radio" value="5" name="tamaño" id="pequenia" checked>
+        <div class="campo campo-pizza" id = "dimensionesContent">
         </div>
 
-        <div class="campo campo-pizza">
-            <label for="mediana">Pizza mediana 10€
-                <img src="./img/pizza.png" alt="pizza pequeña" width="35" height="35"></label>
-            <input type="radio" value="10" name="tamaño" id="mediana">
-        </div>
-
-        <div class="campo campo-pizza">
-            <label for="grande">Pizza grande 15€
-                <img src="./img/pizza.png" alt="pizza pequeña" width="45" height="45"></label>
-            <input type="radio" value="15" name="tamaño" id="grande">
-        </div>
-
-        <h3 class="tittle-second">Eliga los ingredientes de tu pizza (cada ingrediente 1€)</h3>
+        <h3 class="tittle-second">Elija los ingredientes de tu pizza</h3>
 
         <!-- Checkbox -->
         <div class="campo campo-ingrediente" id = "ingredientesContent">
         
         </div>
-        
+
+        <table>
+            <tr>
+                <td><button type="submit" id="btnEnviar" value="Enviar" class="boton">Enviar</button></td>
+                <td></td><button id="btnReset" value="Reset" class="boton">Reset</button></td>
+            </tr>
+        </table>
+                  
+        <p class="warning" id="warning"></p>
+        <div>
+            <p class="total" id="total"></p>
+        </div>
+    </div>
     </form>
 
         
