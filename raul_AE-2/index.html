@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Dom y Formularios. Requerimento 2</title>
+    <script src="/scripts/scripts.js"></script>    
+</head>
+
+<body>
+    <h1>Formulario Requerimento 2</h1>
+    <form action="" name="formulario" class="formulario" id="form">
+        <legend>¿Cómo quieres la pizza hoy?</legend>
+        <div class="contenedor-campos">
+        <!-- Cajas de texto -->
+
+                    <!-- Nombre-->
+        <div class="campo">
+            <label for="nombre">Nombre: </label>
+            <input type="text" name="nombre" id="nombre">
+            <p class="warningNombre" name="parrafoAlert" id="parrafoAlert"></p>
+        </div>
+        
+                    <!-- Telefono -->
+        <div class="campo">
+            <label for="telefono">Telefono: </label>
+            <input type="text" name="telefono" id="telefono">
+            <p class="warningTelefono" name="parrafoAlert" id="parrafoAlert"></p>
+        </div>
+
+                     <!-- Direccion -->
+        <div class="campo largo">
+            <label for="direccion">Direccion: </label>
+            <input type="text" name="direccion" id="direccion">
+            <p class="warningDireccion" name="parrafoAlert" id="parrafoAlert"></p>
+        </div>
+
+                    <!-- Email -->
+        <div class="campo largo">
+            <label for="email">Email: </label>
+            <input type="text" name="email" id="email">
+            <p class="warningEmail" name="parrafoAlert" id="parrafoAlert"></p>
+        </div>
+
+
+        <h3 class="tittle-second">Eliga el tamaño de su pizza</h3>
+        
+        <!-- Radio buttons -->
+        
+
+        <div class="campo campo-ingrediente">
+            <button type="button" class="boton1" id="envDatosTam">Mostrar Tamaños</button>
+        </div>
+        <div class="campo campo-ingrediente table" >
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tamaño</th>
+                        <th>PVP</th>
+                    </tr>
+                </thead>
+                <tbody id="resTam">
+
+                </tbody>
+            </table>
+            
+        </div>
+
+        <h3 class="tittle-second">Eliga los ingredientes de tu pizza (cada ingrediente 1€)</h3>
+
+        <!-- Checkbox -->
+        <div class="campo campo-ingrediente ">
+        
+        </div>
+        
+        <div class="campo campo-ingrediente">
+            <button type="button"class="boton1" id="envDatosIng">Mostrar ingredientes</button>
+        </div>
+        <div class="campo campo-ingrediente table" >
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>PVP</th>
+                    </tr>
+                </thead>
+                <tbody id="resIng">
+
+                </tbody>
+            </table>
+            
+        </div>
+
+        </div>
+
+        <!-- Boton -->
+        <div>
+            <button type="submit" id="btnEnviar" value="Enviar" class="boton">Enviar formulario</button>
+            <p class="warning" id="warning"></p>
+        </div>
+        <div>
+            <p class="total" id="total"></p>
+        </div>
+        
+    </form>
+    
+  
+</body>
+</html>
