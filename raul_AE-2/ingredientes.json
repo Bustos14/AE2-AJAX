@@ -1,6 +1,6 @@
 [
     {
-    "nombre": "CARNE PICADA",
+    "nombre": "CARNE_PICADA",
     "pvp": 2.50
     },
     {
@@ -8,19 +8,19 @@
     "pvp": 1.50
     },
     {
-    "nombre": "EXTRA QUESO",
+    "nombre": "EXTRA_QUESO",
     "pvp": 1.50
     },
     {
-    "nombre": "JAMON COCIDO",
+    "nombre": "JAMON_COCIDO",
     "pvp": 1.50
     },
     {
-    "nombre": "EXTRA TOMATE",
+    "nombre": "EXTRA_TOMATE",
     "pvp": 1.50
     },
     {
-    "nombre": "SALSA BARBACOA",
+    "nombre": "SALSA_BARBACOA",
     "pvp": 1
     },
     {
