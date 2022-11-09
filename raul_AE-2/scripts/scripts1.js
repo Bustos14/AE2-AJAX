@@ -11,7 +11,7 @@ window.onload = function(){
     
 
     function traerDatosIngredientes(){
-        //console.log('funcion activada')
+        console.log('funcion ingredientes activada')
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function(){
             if(this.readyState == 4 && this.status == 200){
@@ -20,19 +20,39 @@ window.onload = function(){
                 document.getElementById('resIng').innerHTML='';
                 //console.log(this.responseText)
 
+                let dviIng = document.getElementById('resIng');
                 for(let item of datos){
-                    document.getElementById('resIng').innerHTML += `
-                        <tr>
-                            <td>${item.nombre}</td>
-                            <input type="checkbox" name="ingredientes" id="${item.nombre}" value="1" class="valores">
-                            <td>${item.pvp}</td>
-                        </tr>
-                    `
+
+                    let tr = document.createElement("tr");
+                    let td = document.createElement("td");
+                    let td1 = document.createElement("td");
+ 
+                    let tamInput = document.createElement('input');
+                    
+                    tamInput.type = 'checkbox';
+                    tamInput.name = 'ingredientes';
+                    tamInput.id = `${item.nombre}`;
+                    tamInput.value = `${item.pvp}`;
+                    tamInput.class = 'tamanios';
+
+                    let tamLabel = document.createElement('label');
+                    let tamLabelPvp = document.createElement('label');
+
+                    tamLabel.appendChild(document.createTextNode(`${item.nombre}`));
+                    tamLabelPvp.appendChild(document.createTextNode(`${item.pvp}`));
+
+                    dviIng.appendChild(tr)
+                    tr.appendChild(td)
+                    td.appendChild(tamLabel);
+                    
+                    tr.appendChild(td1)
+                    td1.appendChild(tamLabelPvp);
+                    dviIng.appendChild(tamInput); 
+                    }
+                    document.querySelector('#CARNE_PICADA').checked = true;
+                    document.querySelector('#CHAMPIÑONES').checked = true;
+                    document.querySelector('#EXTRA_QUESO').checked = true;
                 }
-                document.querySelector('#CEBOLLA').checked = true;
-                document.querySelector('#POLLO').checked = true;
-                document.querySelector('#PIMIENTO').checked = true;
-            }
         }
 
         xhttp.open('GET','ingredientes.json',true);
@@ -42,7 +62,7 @@ window.onload = function(){
     document.querySelector('#envDatosTam').addEventListener('click',traerDatosTam);
 
     function traerDatosTam(){
-        console.log('funcion activada')
+        console.log('funcion tamaños activada')
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function(){
             if(this.readyState == 4 && this.status == 200){
@@ -50,15 +70,37 @@ window.onload = function(){
 
                 document.getElementById('resTam').innerHTML = '';
 
+                let divTam = document.getElementById('resTam');
                 for(let item of datos){
-                    document.getElementById('resTam').innerHTML += `
-                        <tr>
-                            <td>${item.nombre}</td> <input type="radio" name="tamaño" id="${item.nombre}" value="${item.pvp}">
-                            <td>${item.pvp}</td>
-                        </tr>
-                    `
+
+                    let tr = document.createElement("tr");
+                    let td = document.createElement("td");
+                    let td1 = document.createElement("td");
+ 
+                    let tamInput = document.createElement('input');
+                    tamInput.name= 'tamaños';
+                    tamInput.type = 'radio';
+                    tamInput.id = `${item.nombre}`;
+                    tamInput.value = `${item.pvp}`;
+                    tamInput.class = 'ingredientes';
+
+                    let tamLabel = document.createElement('label');
+                    let tamLabelPvp = document.createElement('label');
+
+                    tamLabel.appendChild(document.createTextNode(`${item.nombre}`));
+                    tamLabelPvp.appendChild(document.createTextNode(`${item.pvp}`));
+
+                    divTam.appendChild(tr)
+                    tr.appendChild(td)
+                    td.appendChild(tamLabel);
+                    
+                    tr.appendChild(td1)
+                    td1.appendChild(tamLabelPvp);
+                    divTam.appendChild(tamInput);
+
+
                 }
-                document.querySelector('#INDIVIDUAL').checked = true;
+                document.querySelector('#PORCION_PIZZA').checked = true;
             }
         }
         
@@ -71,21 +113,9 @@ window.onload = function(){
     formulario.onsubmit = validarForm;
 }
 
-function sumaTotal(){
-    let radios = document.querySelectorAll('input[type=radio]');
-    let total = 0;
-    for(let ele = 0; ele < radios.length; i++){
-        total += parseFloat(ele.value);
-     }
-     alert(`El total de la compra es ${total}`);
-    
-}
-
-
+  
 function validarForm(){
     var form = document.querySelector('.formulario');
-
-    sumaTotal();
 
     if(form.nombre.value.trim() == '' || form.telefono.value.trim() == '' || 
         form.direccion.value.trim() == '' || form.email.value.trim() == ''){
@@ -94,24 +124,76 @@ function validarForm(){
             document.querySelector('.warningNombre').innerHTML = `
             <span class="warning">Debes introducir tu nombre, porfavor</span>
             `
+            document.getElementById('warning').innerHTML = `
+            <span class="warning">Debes introducir los campos obligatorios, un tamaño de pizza y al menos un ingrediente</span>
+            `
         } if(form.telefono.value.trim() == ''){
             document.querySelector('.warningTelefono').innerHTML = `
             <span class="warning">Debes introducir tu telefono, porfavor</span>
+            `
+            document.getElementById('warning').innerHTML = `
+            <span class="warning">Debes introducir los campos obligatorios, un tamaño de pizza y al menos un ingrediente</span>
             `
         } if(form.direccion.value.trim() == ''){
             document.querySelector('.warningDireccion').innerHTML = `
             <span class="warning">Debes introducir tu direccion, porfavor</span>
             `
+            document.getElementById('warning').innerHTML = `
+            <span class="warning">Debes introducir los campos obligatorios, un tamaño de pizza y al menos un ingrediente</span>
+            `
         } if(form.email.value.trim() == ''){
             document.querySelector('.warningEmail').innerHTML = `
             <span class="warning">Debes introducir tu email, porfavor</span>
             `
+            document.getElementById('warning').innerHTML = `
+            <span class="warning">Debes introducir los campos obligatorios, un tamaño de pizza y al menos un ingrediente</span>
+            `
         }
 
         form.nombre.focus();
+        sumaTotal();
         return false;
     }
 
+    function sumaTotal(){
+        if(document.querySelectorAll('input[type=radio]').length == 0){
+            alert('Debes sellecionar el tamaño de la pizza')
+        } if (document.querySelectorAll('input[type=checkbox]').length == 0){
+            alert('Debes seleccionar almnenos un ingrediente')
+        } if (document.querySelectorAll('input[type=radio]').length != 0 && document.querySelectorAll('input[type=checkbox]').length != 0) {
+        total = 0;
+        total += mostrarChecks();
+        total += mostrarRadios();
+        alert(`El total de tu pizza será ${total}€`)
+        document.getElementById('warning').innerHTML = `
+            <span class="warning">El total de tu pizza será ${total}€</span>
+            `
+        }
+    }
+
+    function mostrarRadios(){
+        let total = 0;
+        let misradios = document.querySelectorAll('input[type=radio]');
+        for(let ele of misradios){
+            if(ele.checked){
+                total += Number(ele.value);
+            }
+        }
+
+        return total;
+    }
+
+    function mostrarChecks(){
+        let total = 0;
+        let misChecks = document.querySelectorAll('input[name=ingredientes]');
+        for(let ele of misChecks){
+            if(ele.checked){
+                total += Number(ele.value);
+            } 
+        }
+
+        return total;
+    }
 
 
 }
