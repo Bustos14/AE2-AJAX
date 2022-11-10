@@ -1,7 +1,7 @@
 
 const INGREDIENTES = "ingredientes.json"
 const TAMANIOS = "tamanios.json"
-const URL_DESTINO = "https://github.com/Bustos14/AE2-AJAX/tree/main/raul_AE-2/"
+const URL_DESTINO = "http://localhost:5500/raul_AE-2/"
 
 
 window.onload = function(){
