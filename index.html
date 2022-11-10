@@ -2,17 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/style.css" rel="stylesheet">
-    <script type="text/javascript" src="/AE2_AJAX-FORMULARIOS/scripts/scripts.js"></script>
-
+    <script type="text/javascript" src="scripts/scripts.js"></script>
     <title>AJAX y Formularios. </title>
 </head>
 
 <body>
     <div class="w-33">
-    <form action="" name="formulario" class="formulario" id="form">
+    <form class="formulario" id="form">
         <legend>¿Cómo quieres la pizza hoy?</legend>
         <div class="contenedor-campos">
         <!-- Cajas de texto -->
@@ -58,11 +55,11 @@
         <div class="campo campo-ingrediente" id = "ingredientesContent">
         
         </div>
-
+    </form>
         <table>
             <tr>
-                <td><button type="submit" id="btnEnviar" value="Enviar" class="boton">Enviar</button></td>
-                <td></td><button id="btnReset" value="Reset" class="boton">Reset</button></td>
+                <td><button  id="btnEnviar" class="boton">Procesar pedido</button></td>
+                <td></td><button id="btnReset" class="boton">Refrescar</button>
             </tr>
         </table>
                   
@@ -70,9 +67,6 @@
         <div>
             <p class="total" id="total"></p>
         </div>
-    </div>
-    </form>
-
-        
+    </div>       
 </body>
 </html>
