@@ -1,6 +1,7 @@
 
-const RECURSO = "ingredientes.json"
-const URL_DESTINO = "http://localhost:5500/PRUEBA_AE-2/"
+const INGREDIENTES = "ingredientes.json"
+const TAMANIOS = "tamanios.json"
+const URL_DESTINO = "https://github.com/Bustos14/AE2-AJAX/tree/main/raul_AE-2/"
 
 
 window.onload = function(){
@@ -55,7 +56,8 @@ window.onload = function(){
                 }
         }
 
-        xhttp.open('GET','ingredientes.json',true);
+        //xhttp.open('GET','ingredientes.json',true);
+        xhttp.open('GET',URL_DESTINO+INGREDIENTES,true);
         xhttp.send()
     }
 
@@ -104,7 +106,8 @@ window.onload = function(){
             }
         }
         
-            xhttp.open('GET','tamanios.json',true);
+            //xhttp.open('GET','tamanios.json',true);
+            xhttp.open('GET',URL_DESTINO+TAMANIOS,true);
             xhttp.send();
     }
 
